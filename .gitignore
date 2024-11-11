@@ -1,0 +1,74 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.pydist
+*.so
+__pycache__/
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+
+# Django specific
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+*/migrations/
+staticfiles/
+media/
+.env
+env/
+venv/
+.envrc
+.vscode/
+.idea/
+*.swp
+
+# Tailwind CSS and NPM
+node_modules/
+*.lock
+*.css.map
+*.css.*
+.tailwind/
+postcss.config.js
+tailwind.config.js
+
+# Virtual environment
+venv/
+ENV/
+
+# macOS
+.DS_Store
+
+# IDE specific
+*.sublime-workspace
+*.sublime-project
+
+# PyCharm
+.idea/
+__pycache__/
+*.iml
+
+# VS Code
+.vscode/
+
+# Coverage and testing
+coverage/*
+.coverage
+htmlcov/
+.tox/
+.cache/
+pytest_cache/
+
+# Logs
+*.log
+
+# Local .env files
+*.env
+*.env.*

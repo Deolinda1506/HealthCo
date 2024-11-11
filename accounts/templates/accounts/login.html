@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-indigo-500">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 mx-4 md:mx-0">
+        <h2 class="text-2xl font-bold text-blue-600 mb-2 text-center">Welcome Back!</h2>
+        <p class="text-gray-700 text-center mb-6">Login to Your Account</p>
+
+        {% if form.errors %}
+        <ul class="mb-4 text-sm text-red-500">
+            {% for field in form %}
+            {% for error in field.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit"
+                class="w-full py-2 mt-4 text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-150">
+                Login
+            </button>
+        </form>
+
+        <p class="mt-4 text-center text-gray-600">
+            Don't have an account? <a href="{% url 'register' %}" class="text-blue-600 hover:underline">Register
+                here</a>
+        </p>
+        <!-- login.html (example) -->
+        <p class="text-right">
+            <a href="{% url 'password_reset' %}" class="text-blue-600 hover:underline">Forgot Password?</a>
+        </p>
+
+    </div>
+</div>
+
+<!-- Tailwind Form Styles -->
+<style>
+    /* Apply Tailwind to form inputs and error styling */
+    input[type="text"],
+    input[type="password"] {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!-- templates/accounts/register_doctor.html -->
+{% extends "./base.html" %}
+
+{% block content %}
+<div class="container mx-auto py-16 max-w-lg">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Inscription Docteur</h2>
+
+    <form method="post"
+        class="bg-white p-10 rounded-lg shadow-lg transition-transform transform hover:shadow-2xl hover:-translate-y-1">
+        {% csrf_token %}
+
+        <!-- User Information Section -->
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <div
+                    class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                    <!-- User Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.667 0 8 1.333 8 4v1H4v-1c0-2.667 5.333-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z" />
+                    </svg>
+                </div>
+                <h3 class="ml-3 text-lg font-semibold text-gray-700">Informations Utilisateur</h3>
+            </div>
+            <div class="space-y-4">
+                {{ user_form.as_p }}
+            </div>
+        </div>
+
+        <!-- Doctor Profile Section -->
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <div
+                    class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                    <!-- Doctor Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M18 8a6 6 0 11-12 0 6 6 0 0112 0zM9 18a1 1 0 01-.894-.553l-3-6A1 1 0 016 10h8a1 1 0 01.894 1.447l-3 6A1 1 0 019 18z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3 class="ml-3 text-lg font-semibold text-gray-700">Profil Docteur</h3>
+            </div>
+            <div class="space-y-4">
+                {{ profile_form.as_p }}
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+            class="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition-colors duration-300">
+            S'inscrire en tant que Docteur
+        </button>
+    </form>
+</div>
+{% endblock %}

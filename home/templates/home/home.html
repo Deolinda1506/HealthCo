@@ -1,0 +1,79 @@
+<!-- home.html -->
+{% extends "./base.html" %}
+
+{% block title %}Welcome to Telemedicine Platform{% endblock %}
+
+{% block content %}
+<div class="container mx-auto text-center py-16">
+
+    <!-- Hero Section -->
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Your Health, Our Priority</h1>
+    <p class="text-lg text-gray-600 mb-8">
+        Book appointments, consult with doctors, and manage your health - all in one place.
+    </p>
+
+    <div class="flex justify-center space-x-4 mt-8">
+        <a href="{% url 'appointment' %}"
+            class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+            Book Appointment
+        </a>
+        <a href="{% url 'learn_more' %}"
+            class="px-6 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600">
+            Learn More
+        </a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Video Call Appointments</h3>
+            <p class="text-gray-600">Meet with doctors virtually from the comfort of your home.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Chat and Audio Consultations</h3>
+            <p class="text-gray-600">Text or call your doctor for quick consultations.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Manage Appointments</h3>
+            <p class="text-gray-600">Track past and upcoming appointments with ease.</p>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="mt-16">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Step 1: Register</h3>
+                <p class="text-gray-600">Sign up and create your profile in a few easy steps.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Step 2: Book an Appointment</h3>
+                <p class="text-gray-600">Choose your doctor and schedule an appointment.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Step 3: Connect with Your Doctor</h3>
+                <p class="text-gray-600">Consult with your doctor through video, audio, or chat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="mt-16">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">What Our Patients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-600 mb-4">"This platform has made it so easy to get the care I need without leaving
+                    my home!"</p>
+                <p class="text-gray-800 font-semibold">- Jane Doe</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-600 mb-4">"Excellent service and the doctors are very professional. Highly
+                    recommended!"</p>
+                <p class="text-gray-800 font-semibold">- John Smith</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
