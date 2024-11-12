@@ -1,0 +1,108 @@
+<!-- templates/emails/account_activation_email.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your Account</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-header {
+            background-color: #4c8bf5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .email-content {
+            padding: 30px;
+            color: #333;
+            text-align: left;
+        }
+
+        .email-content h1 {
+            color: #4c8bf5;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .email-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .email-button {
+            display: inline-block;
+            background-color: #4c8bf5;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .email-footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .email-footer a {
+            color: #4c8bf5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <!-- Header Section -->
+        <div class="email-header">
+            <h2>Activate Your Account</h2>
+        </div>
+
+        <!-- Content Section -->
+        <div class="email-content">
+            <h1>Welcome, {{ username }}!</h1>
+            <p>Thank you for signing up with us. To complete your registration and get started, please activate your
+                account by clicking the button below.</p>
+            <a href="{{ activation_link }}" class="email-button">Activate Account</a>
+            <p>If the button above doesn’t work, copy and paste the following link into your browser:</p>
+            <p><a href="{{ activation_link }}" style="color: #4c8bf5;">{{ activation_link }}</a></p>
+            <p>We're excited to have you on board. Welcome to the community!</p>
+            <p>Best regards,<br>The Team</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="email-footer">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+            <p>
+                <a href="https://yourwebsite.com/privacy">Privacy Policy</a> |
+                <a href="https://yourwebsite.com/terms">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

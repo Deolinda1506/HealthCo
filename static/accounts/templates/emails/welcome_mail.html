@@ -1,0 +1,107 @@
+<!-- templates/emails/welcome_email.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Website</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-header {
+            background-color: #4c8bf5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .email-content {
+            padding: 30px;
+            color: #333;
+            text-align: left;
+        }
+
+        .email-content h1 {
+            color: #4c8bf5;
+            font-size: 24px;
+        }
+
+        .email-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .email-button {
+            display: inline-block;
+            background-color: #4c8bf5;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .email-footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .email-footer a {
+            color: #4c8bf5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <!-- Header Section -->
+        <div class="email-header">
+            <h2>Welcome to Our Website</h2>
+        </div>
+
+        <!-- Content Section -->
+        <div class="email-content">
+            <h1>Hello {{ username }}!</h1>
+            <p>Thank you for joining our community! We are thrilled to have you with us. Our platform is designed to
+                provide you with everything you need to stay connected, informed, and engaged.</p>
+            <p>To get started, explore our website and see what we have to offer. If you have any questions, feel free
+                to reach out to our support team.</p>
+            <a href="https://yourwebsite.com/login" class="email-button">Explore Your Dashboard</a>
+            <p>We're here to help you every step of the way. Welcome aboard!</p>
+            <p>Best regards,<br>The Team</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="email-footer">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+            <p>
+                <a href="https://yourwebsite.com/privacy">Privacy Policy</a> |
+                <a href="https://yourwebsite.com/terms">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

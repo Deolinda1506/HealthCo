@@ -1,0 +1,56 @@
+<!-- templates/accounts/register_choice.html -->
+{% extends "./base.html" %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <div class="w-full max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-10 text-gray-800">Choisissez votre type d'inscription</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10">
+
+            <!-- Choix Inscription Patient -->
+            <a href="{% url 'register_patient' %}"
+                class="group block w-full max-w-sm bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+                <div class="p-6">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 text-blue-500 rounded-full mb-4">
+                        <!-- Patient Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M18 8a6 6 0 11-12 0 6 6 0 0112 0zM9 18a1 1 0 01-.894-.553l-3-6A1 1 0 016 10h8a1 1 0 01.894 1.447l-3 6A1 1 0 019 18z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Inscription en tant que Patient</h3>
+                    <p class="text-gray-500 mb-4">Accédez aux services de santé et connectez-vous avec les médecins pour
+                        vos
+                        besoins médicaux.</p>
+                    <button
+                        class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg w-full transition-colors duration-300 hover:bg-blue-600">Inscrivez-vous</button>
+                </div>
+            </a>
+
+            <!-- Choix Inscription Docteur -->
+            <a href="{% url 'register_doctor' %}"
+                class="group block w-full max-w-sm bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+                <div class="p-6">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-green-100 text-green-500 rounded-full mb-4">
+                        <!-- Doctor Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 10c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-7 8a7 7 0 0114 0H3zm7-13a5 5 0 11-10 0 5 5 0 0110 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Inscription en tant que Docteur</h3>
+                    <p class="text-gray-500 mb-4">Rejoignez notre plateforme pour fournir des soins de qualité et gérer
+                        vos
+                        rendez-vous.</p>
+                    <button
+                        class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg w-full transition-colors duration-300 hover:bg-green-600">Inscrivez-vous</button>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

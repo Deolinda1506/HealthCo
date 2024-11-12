@@ -89,6 +89,7 @@ DATABASES = {
 
 AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailBackend',  # Custom email backend
+    
 ]
 
 
@@ -133,13 +134,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# settings.py
+LOGOUT_REDIRECT_URL = '/login/'  # or any other URL
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # for example, use the SMTP server of your email provider
-EMAIL_PORT = 587  # or 465 if using SSL
-EMAIL_USE_TLS = True  # or EMAIL_USE_SSL for port 465
-EMAIL_HOST_USER = 'your_email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your_email_password'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-#  (development only)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = 'newuser@localhost'
+EMAIL_HOST_PASSWORD = 'user'
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
